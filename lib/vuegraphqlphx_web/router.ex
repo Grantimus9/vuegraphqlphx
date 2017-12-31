@@ -14,12 +14,17 @@ defmodule VuegraphqlphxWeb.Router do
 
   scope "/", VuegraphqlphxWeb do
     pipe_through :browser # Use the default browser stack
-
     get "/", PageController, :index
   end
+  
+  forward "/graphql",
+    Absinthe.Plug,
+    schema: VuegraphqlphxWeb.Schema
+  
+  forward "/graphiql",
+    Absinthe.Plug.GraphiQL,
+    schema: VuegraphqlphxWeb.Schema,
+    interface: :simple
 
-  # Other scopes may use custom stacks.
-  # scope "/api", VuegraphqlphxWeb do
-  #   pipe_through :api
-  # end
+
 end

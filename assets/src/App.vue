@@ -31,7 +31,6 @@ export default {
   },
  apollo: {
     // Apollo specific options
-    hello: gql`{hello}`
   }
 }
 </script>

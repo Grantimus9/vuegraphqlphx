@@ -14,8 +14,8 @@ defmodule VuegraphqlphxWeb.Endpoint do
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
-    socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
-    plug Phoenix.LiveReloader
+    # socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
+    # plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
   end
 
@@ -23,7 +23,7 @@ defmodule VuegraphqlphxWeb.Endpoint do
   plug Plug.Logger
 
   plug Plug.Parsers,
-    parsers: [:urlencoded, :multipart, :json],
+    parsers: [:urlencoded, :multipart, :json, Absinthe.Plug.Parser],
     pass: ["*/*"],
     json_decoder: Poison
 
