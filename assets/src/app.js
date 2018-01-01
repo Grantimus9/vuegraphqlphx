@@ -5,8 +5,6 @@ import { HttpLink } from 'apollo-link-http'
 import VueApollo from 'vue-apollo'
 
 
-import gql from 'graphql-tag'
-
 // 
 import App from './App.vue'
 // 
