@@ -2,6 +2,8 @@
 
 ## A starter for GraphQL, Vue.js, and Elixir/Phoenix Projects
 
+## Blog Post Corresponding to this Repo: [https://medium.com/@grantmnelsn/how-to-setup-graphql-vue-js-and-phoenix-1-3-part-1-the-backend-e3305641e5c](https://medium.com/@grantmnelsn/how-to-setup-graphql-vue-js-and-phoenix-1-3-part-1-the-backend-e3305641e5c)
+
 Key Components:
 
   * Vue.js, supporting single-file .vue components.
