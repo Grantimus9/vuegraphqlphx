@@ -5,9 +5,9 @@ import { HttpLink } from 'apollo-link-http'
 import VueApollo from 'vue-apollo'
 
 
-// 
+//
 import App from './App.vue'
-// 
+//
 const httpLink = new HttpLink({
   // You should use an absolute URL here
   uri: 'http://localhost:4000/graphql',
@@ -29,6 +29,6 @@ const apolloProvider = new VueApollo({
 
 new Vue({
   el: '#app',
-  apolloProvider,
+  provide: apolloProvider.provide(),
   render: h => h(App)
 })
